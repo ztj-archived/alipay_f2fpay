@@ -1,0 +1,4 @@
+*.stackdump
+/config/config.php
+/log/log.txt
+.DS_Store

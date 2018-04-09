@@ -1,4 +1,6 @@
+.idea
 *.stackdump
+.DS_Store
+.pem
 /config/config.php
 /log/log.txt
-.DS_Store

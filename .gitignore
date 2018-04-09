@@ -1,6 +1,6 @@
 .idea
 *.stackdump
+*.pem
 .DS_Store
-.pem
 /config/config.php
-/log/log.txt
+/log/log*

@@ -1,8 +1,8 @@
 <?php
 /* *
  * 功能：支付宝服务器异步通知页面 (集成于当面付产品)
- * 版本：1.0
- * 修改日期：2018-04-07
+ * 版本：1.1
+ * 修改日期：2018-04-09
  * 说明：
  * 以下代码只是为了方便商户测试而提供的样例代码，商户可以根据自己网站的需要，按照技术文档编写,并非一定要使用该代码。
 
@@ -14,10 +14,13 @@
 
 require_once './../service/AlipayTradeService.php';
 
-$arr=$_POST;
 $alipaySevice = new AlipayTradeService($config);
 $alipaySevice->writeLog(var_export($_POST,true));
-$result = $alipaySevice->check($arr);
+
+$aop = new AopClient();
+$aop->alipayrsaPublicKey = $config['alipay_public_key'];
+$result = $aop->rsaCheckV1($_POST, $config['alipay_public_key'], $config['sign_type']);
+$alipaySevice->writeLog(var_export($result,true));
 
 /* 实际验证过程建议商户添加以下校验。
 1、商户需要验证该通知数据中的out_trade_no是否为商户系统中创建的订单号，

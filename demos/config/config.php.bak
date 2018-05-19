@@ -1,0 +1,11 @@
+<?php
+return [
+    //应用ID
+    'app_id' => '',
+    //支付宝公钥
+    'alipay_public_key' => '',
+    //商户私钥
+    'merchant_private_key' => '',
+    //异步通知地址,只有扫码支付预下单可用
+    'notify_url' => '',
+];

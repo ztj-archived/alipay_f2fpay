@@ -2,5 +2,4 @@
 *.stackdump
 *.pem
 .DS_Store
-/config/config.php
-/log/log*
+config.php

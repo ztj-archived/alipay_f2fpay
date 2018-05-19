@@ -5,14 +5,6 @@
  * Date: 16/5/19
  * Time: 下午2:09
  */
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../alipay_sdk/AopSdk.php';
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../model/result/AlipayF2FPayResult.php';
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/result/AlipayF2FQueryResult.php';
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/result/AlipayF2FRefundResult.php';
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/result/AlipayF2FPrecreateResult.php';
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/builder/AlipayTradeQueryContentBuilder.php';
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/builder/AlipayTradeCancelContentBuilder.php';
-require dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../config/config.php';
 
 class AlipayTradeService {
 
@@ -356,7 +348,7 @@ class AlipayTradeService {
 	function writeLog($text) {
 		// $text=iconv("GBK", "UTF-8//IGNORE", $text);
 		//$text = characet ( $text );
-		file_put_contents ( __DIR__ . "/../log/log.txt", date ( "Y-m-d H:i:s" ) . "  " . $text . "\r\n", FILE_APPEND );
+		// file_put_contents ( __DIR__ . "/../log/log.txt", date ( "Y-m-d H:i:s" ) . "  " . $text . "\r\n", FILE_APPEND );
 	}
 
 	/** *利用google api生成二维码图片

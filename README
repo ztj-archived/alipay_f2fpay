@@ -3,20 +3,24 @@
 官方 SDK&Demo 下载地址：
 - 进入：开放平台 > 文档中心 > 开发文档 > 当面付 > SDK&Demo
 
-增加的功能：
+主要功能：
 - 增加了 异步接口通知 示例
-
-修复的功能：
-- 修正了图片二维码生成 API
-- 修正了生成日志时的目录定位问题
-- 修正了当面付示例的门店测试参数问题
+- 集中了 功能到统一调用接口 (生成二维码，异步返回，退款，查询订单)
 
 使用方法：
 - 克隆本仓库
 - 初始化子模块
-- config/config.php.bak 复制到 config/config.php
+- /demos/config/config.php.bak 复制到 demos/config/config.php
 - 根据需要进行配置
-- 访问 demos/index.php 进行测试
+- 访问 /demos/payment/qrpay.php 进行测试
+
+目录及文件说明：
+- /alipay_sdk     支付宝 SDK
+- /f2fpay_sdk     扫码付 SDK
+- /demos/payment/qrpay.php     订单二维码生成
+- /demos/payment/query.php     订单支付查询
+- /demos/refund/refund.php     订单退款
+- /demos/notice/notify_url.php 异步通知
 
 开发日志：
 - 2018-05-19

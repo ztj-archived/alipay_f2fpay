@@ -1,3 +1,6 @@
 [submodule "alipay_sdk"]
 	path = alipay_sdk
 	url = https://github.com/ztj1993/alipay_sdk.git
+[submodule "f2fpay_sdk"]
+	path = f2fpay_sdk
+	url = https://github.com/ztj1993/f2fpay_sdk.git
